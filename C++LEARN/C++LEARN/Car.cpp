@@ -17,7 +17,13 @@ void Car::Accel()
 	if (!(fuelGauge <= 0))
 		return;
 	fuelGauge -= CAR_CONST::FUEL_STEP;
-		
+	
+	/*
+	if (fuelGauge <= 0)
+		return;
+	else
+		fuelGauge -= CAR_CONST::FUEL_STEP;
+	*/
 
 	if (!((curSpeed + CAR_CONST::ACC_STEP) >= CAR_CONST::MAX_SPD))
 	{
